@@ -39,7 +39,7 @@ let g:rainbow_active = 1
 
 " lightline
 let g:lightline = {
-    \ 'colorscheme': 'Dracula'
+    \ 'colorscheme': 'dracula'
 \}
 set laststatus=2
 set noshowmode 
