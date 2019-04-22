@@ -7,7 +7,6 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-" Declare the list of plugins.
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
@@ -15,6 +14,7 @@ Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
