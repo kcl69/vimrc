@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
@@ -56,6 +56,17 @@ let g:ycm_filetype_whitelist = {
             \ "python": 1,
             \ "sh": 1,
             \ }
+
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+    set pastetoggle=<Esc>[201~
+    set paste
+    return ""
+endfunction
 
 " Key Mapping
 inoremap ( ()<Esc>i
