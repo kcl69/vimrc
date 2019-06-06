@@ -57,6 +57,7 @@ let g:ycm_filetype_whitelist = {
             \ "sh": 1,
             \ }
 
+" for paste
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 
