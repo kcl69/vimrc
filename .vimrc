@@ -28,6 +28,9 @@ Plug 'dense-analysis/ale'
 Plug 'Yggdroot/LeaderF', {'do': './install.sh'}
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'rhysd/git-messenger.vim'
 
 call plug#end()
 
@@ -137,6 +140,12 @@ let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
 let g:ale_c_cppcheck_options = ''
 let g:ale_cpp_cppcheck_options = ''
+
+let g:rustfmt_autosave = 1
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
 
 " FOR COC
 " TextEdit might fail if hidden is not set.
@@ -285,3 +294,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " config file highlight
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" vim-messenger
+let g:git_messenger_close_on_cursor_moved = v:false
+let g:git_messenger_always_into_popup = v:true
